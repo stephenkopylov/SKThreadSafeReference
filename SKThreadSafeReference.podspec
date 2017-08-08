@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "SKThreadSafeReference"
-  s.version      = "0.2"
+  s.version      = "0.3"
   s.summary      = "Wrapper around Realm's RLMThreadSafeReference"
 
   # This description is used to generate tags and improve search results.
