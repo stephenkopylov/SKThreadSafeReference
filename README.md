@@ -1,8 +1,3 @@
-<p align="center">
-  <img src="misc/logo.png"/>
-</p>
-
-
 
 <p align="center">
 <a href="https://travis-ci.org/stephenkopylov/SKThreadSafeReference"><img src="https://travis-ci.org/stephenkopylov/SKThreadSafeReference.svg" alt="Build Status"/></a>
@@ -17,8 +12,6 @@ It renders all your stuff in background GCD-thread and shows result on main thre
 
 **Now it uses only OpenGLES2**
 
-![Screenshot](misc/demo.gif)
-
 
 ### Install
 #### CocoaPods
@@ -32,21 +25,15 @@ Download this repo and drop this files into your project
 ![Screenshot](misc/screen1.png)
 
 ### Usage
-After installation, inherit your viewController from SKAsyncGLViewController and implement these methods:
+Create thread-safe instance:
+``` objectiveC
+SKThreadSafeReference *safeReference = [SKThreadSafeReference referenceWithThreadConfined:nonSafeRealmObject];
+```
 
-- **- (void)setupGL** 
-
-:wrench: This one for setup your GL - create buffers/load shaders/etc here.
-- **- (void)drawGL:(CGRect)rect**
-
-:black_nib: :pencil2: Here you draws all your stuff!
-- **- (void)clearGL**
-
-:x: This method calls when your vc's view removes from superview. So here you have to clear all your gl stuff (delete buffers .etc)
-
-
-You can access framebuffer, renderbuffer and background queue through view's properties.
-
+pass it to another thread, and then easily get your RLMObject-instance:
+``` objectiveC
+Foo *nonSafeObject = safeReference.nonSafeObject;
+```
 
 
 ### License
@@ -70,4 +57,3 @@ FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
