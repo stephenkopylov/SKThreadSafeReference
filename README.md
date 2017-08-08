@@ -6,12 +6,7 @@
 <a href="http://cocoapods.org/pods/SKThreadSafeReference"><img src="https://img.shields.io/badge/platform-ios-brightgreen.svg?style=flat" alt="Platform"/></a>  
 </p>
 
-SKAsyncGLViewController - replacement for classical GLKit stack (GLKView + GLKViewController). 
-
-It renders all your stuff in background GCD-thread and shows result on main thread.
-
-**Now it uses only OpenGLES2**
-
+SKThreadSafeReference - small and very simple wrapper around Realm's RLMThreadSafeReference, that makes working with non-default Realm's configuration much easier.
 
 ### Install
 #### CocoaPods
