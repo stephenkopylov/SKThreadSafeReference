@@ -15,9 +15,9 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "SKAsyncGLViewController"
-  s.version      = "0.1.6"
-  s.summary      = "Asynchronious OpenGL (OpenGLSE2) stack"
+  s.name         = "SKThreadSafeReference"
+  s.version      = "0.1"
+  s.summary      = "Wrapper around Realm's RLMThreadSafeReference"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-  SKAsyncGLViewController - replacement for classical GLKit stack (GLKView + GLKViewController). It renders all your stuff in background GCD-thread and shows result on main thread.
+  SKThreadSafeReference - small and very simple wrapper around Realm's RLMThreadSafeReference, that makes working with non-default Realm's configuration much easier.
   DESC
 
   s.homepage     = "https://github.com/stephenkopylov/SKAsyncGLViewController"
@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/stephenkopylov/SKAsyncGLViewController.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/stephenkopylov/SKThreadSafeReference.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -134,6 +134,6 @@ Pod::Spec.new do |s|
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
-  s.dependency "RDRIntermediateTarget"
+  s.dependency "Realm"
 
 end
