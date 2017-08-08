@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
   SKThreadSafeReference - small and very simple wrapper around Realm's RLMThreadSafeReference, that makes working with non-default Realm's configuration much easier.
   DESC
 
-  s.homepage     = "https://github.com/stephenkopylov/SKAsyncGLViewController"
+  s.homepage     = "https://github.com/stephenkopylov/SKThreadSafeReference"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
